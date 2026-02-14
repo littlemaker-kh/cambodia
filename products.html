@@ -16,163 +16,170 @@
             <a href="index.html" class="logo">
                 <i class="fa-solid fa-gears"></i> LITTLEMAKER
             </a>
+            
+            <!-- Desktop Menu -->
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link" data-translate="nav_home">Home</a></li>
+                <li><a href="about.html" class="nav-link" data-translate="nav_about">About Us</a></li>
+                <li><a href="services.html" class="nav-link" data-translate="nav_services">Services</a></li>
+                <li><a href="products.html" class="nav-link active" data-translate="nav_shop">Shop</a></li>
+            </ul>
+
+            <!-- Right Controls -->
             <div class="nav-controls">
-                <div class="cart-wrapper mobile-only">
-                    <a href="#" class="cart-trigger"><i class="fa-solid fa-cart-shopping"></i></a>
-                    <span class="cart-badge mobile-cart-count">0</span>
+                <!-- Cart -->
+                <div class="cart-wrapper cart-trigger">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
                 </div>
+
+                <!-- Lang -->
+                <div class="lang-dropdown">
+                    <button class="lang-btn" id="langBtn">
+                        <i class="fa-solid fa-globe"></i> <span id="currentLang">EN</span>
+                    </button>
+                    <div class="lang-menu" id="langMenu">
+                        <a href="#" data-lang="en">English</a>
+                        <a href="#" data-lang="kh">ខ្មែរ</a>
+                        <a href="#" data-lang="cn">中文</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Toggle -->
                 <div class="menu-toggle" id="mobile-menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
             </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
-                <li><a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
-                <li><a href="services.html" class="nav-link"><i class="fa-solid fa-screwdriver-wrench"></i> Services</a></li>
-                <li><a href="products.html" class="nav-link active"><i class="fa-solid fa-shop"></i> Shop</a></li>
-                <li class="desktop-only">
-                    <a href="#" class="cart-wrapper cart-trigger">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="cart-badge" id="cart-count">0</span>
-                    </a>
-                </li>
-            </ul>
         </div>
     </nav>
 
     <header class="page-header">
         <div class="container">
-            <h1>Product Catalog</h1>
-            <p>Quality Metal Parts & Office Furniture</p>
+            <h1 data-translate="prod_header">Product Catalog</h1>
+            <p data-translate="prod_sub">Quality Tables, Cabinets & Grills</p>
         </div>
     </header>
 
     <section class="section-padding">
         <div class="container">
             
-            <!-- Filter Buttons -->
-            <div class="filter-container fade-in">
-                <button class="filter-btn active" data-filter="all">All Products</button>
-                <button class="filter-btn" data-filter="office">Office Furniture</button>
-                <button class="filter-btn" data-filter="cnc">CNC Parts</button>
-                <button class="filter-btn" data-filter="industrial">Industrial</button>
-                <button class="filter-btn" data-filter="welding">Construction</button>
+            <!-- Search & Filter Section -->
+            <div class="filter-section fade-in">
+                <div class="search-wrapper">
+                    <input type="text" id="productSearch" placeholder="Search products..." data-translate-placeholder="search_ph">
+                    <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="filter-container">
+                    <button class="filter-btn active" data-filter="all" data-translate="filter_all">All</button>
+                    <button class="filter-btn" data-filter="tables" data-translate="filter_tables">Tables (តុ)</button>
+                    <button class="filter-btn" data-filter="cabinets" data-translate="filter_cabinets">Cabinets (ទូរ)</button>
+                    <button class="filter-btn" data-filter="grills" data-translate="filter_grills">Grills (ចង្កានអាំងសាច់)</button>
+                </div>
             </div>
 
             <!-- Products Grid -->
             <div class="products-grid">
 
-                <!-- NEW: Office Product 1 -->
-                <div class="product-card fade-in" data-category="office">
+                <!-- Product 1: Table -->
+                <div class="product-card fade-in" data-category="tables">
                     <div class="product-img">
                         <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Office Desk">
                         <span class="badge-new">New</span>
                     </div>
                     <div class="product-details">
-                        <span class="product-cat">Office Furniture</span>
-                        <h4>Modern Executive Desk</h4>
-                        <p class="product-desc">Minimalist steel frame desk with wooden top.</p>
+                        <span class="product-cat" data-translate="filter_tables">Tables (តុ)</span>
+                        <h4 data-translate="prod_1_title">Modern Executive Desk</h4>
+                        <p class="product-desc" data-translate="prod_1_desc">Minimalist steel frame desk with wooden top.</p>
                         <div class="product-bottom">
                             <span class="price">$185.00</span>
-                            <button class="btn-cart add-to-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+                            <button class="btn-cart add-to-cart" data-translate="btn_add"><i class="fa-solid fa-cart-plus"></i> Add</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- NEW: Office Product 2 -->
-                <div class="product-card fade-in" data-category="office">
+                <!-- Product 2: Cabinet -->
+                <div class="product-card fade-in" data-category="cabinets">
                     <div class="product-img">
                         <img src="https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="File Cabinet">
                     </div>
                     <div class="product-details">
-                        <span class="product-cat">Office Furniture</span>
-                        <h4>Steel File Cabinet (3-Drawer)</h4>
-                        <p class="product-desc">Secure storage with locking mechanism.</p>
+                        <span class="product-cat" data-translate="filter_cabinets">Cabinets (ទូរ)</span>
+                        <h4 data-translate="prod_2_title">Steel File Cabinet (3-Drawer)</h4>
+                        <p class="product-desc" data-translate="prod_2_desc">Secure storage with locking mechanism.</p>
                         <div class="product-bottom">
                             <span class="price">$95.00</span>
-                            <button class="btn-cart add-to-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+                            <button class="btn-cart add-to-cart" data-translate="btn_add"><i class="fa-solid fa-cart-plus"></i> Add</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- NEW: Office Product 3 -->
-                <div class="product-card fade-in" data-category="office">
+                <!-- Product 3: Table -->
+                <div class="product-card fade-in" data-category="tables">
                     <div class="product-img">
                         <img src="https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Meeting Table">
                     </div>
                     <div class="product-details">
-                        <span class="product-cat">Office Furniture</span>
-                        <h4>Conference Table (8 Seats)</h4>
-                        <p class="product-desc">Durable metal legs with glass or wood top.</p>
+                        <span class="product-cat" data-translate="filter_tables">Tables (តុ)</span>
+                        <h4 data-translate="prod_3_title">Conference Table (8 Seats)</h4>
+                        <p class="product-desc" data-translate="prod_3_desc">Durable metal legs with glass or wood top.</p>
                         <div class="product-bottom">
                             <span class="price">$450.00</span>
-                            <button class="btn-cart add-to-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+                            <button class="btn-cart add-to-cart" data-translate="btn_add"><i class="fa-solid fa-cart-plus"></i> Add</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Product 1 -->
-                <div class="product-card fade-in" data-category="cnc">
+                <!-- Product 4: Grill -->
+                <div class="product-card fade-in" data-category="grills">
                     <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1535295972055-1c762f4483e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Precision Gears">
+                        <img src="https://images.unsplash.com/photo-1555012493-06e719c6e2fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="BBQ Grill">
+                        <span class="badge-sale">Hot</span>
                     </div>
                     <div class="product-details">
-                        <span class="product-cat">CNC Machining</span>
-                        <h4>Precision Steel Gear</h4>
+                        <span class="product-cat" data-translate="filter_grills">Grills (ចង្កានអាំងសាច់)</span>
+                        <h4 data-translate="prod_4_title">Premium BBQ Grill Stand</h4>
+                        <p class="product-desc" data-translate="prod_4_desc">Heavy duty steel charcoal grill for outdoor parties.</p>
                         <div class="product-bottom">
-                            <span class="price">$45.00</span>
-                            <button class="btn-cart add-to-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+                            <span class="price">$250.00</span>
+                            <button class="btn-cart add-to-cart" data-translate="btn_add"><i class="fa-solid fa-cart-plus"></i> Add</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Product 2 -->
-                <div class="product-card fade-in" data-category="welding">
+                <!-- Product 5: Cabinet -->
+                <div class="product-card fade-in" data-category="cabinets">
                     <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Structural Frame">
+                        <img src="https://images.unsplash.com/photo-1622634479261-75890250761d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Industrial Locker">
                     </div>
                     <div class="product-details">
-                        <span class="product-cat">Construction</span>
-                        <h4>Heavy Duty Beam Bracket</h4>
+                        <span class="product-cat" data-translate="filter_cabinets">Cabinets (ទូរ)</span>
+                        <h4 data-translate="prod_5_title">Industrial Metal Locker</h4>
+                        <p class="product-desc" data-translate="prod_5_desc">Single door locker for workshop or gym.</p>
                         <div class="product-bottom">
                             <span class="price">$120.00</span>
-                            <button class="btn-cart add-to-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+                            <button class="btn-cart add-to-cart" data-translate="btn_add"><i class="fa-solid fa-cart-plus"></i> Add</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Product 3 -->
-                <div class="product-card fade-in" data-category="industrial">
+                <!-- Product 6: Grill -->
+                <div class="product-card fade-in" data-category="grills">
                     <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1622634479261-75890250761d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Custom Enclosure">
+                        <img src="https://images.unsplash.com/photo-1533561339343-b96431f9076f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Camping Stove">
                     </div>
                     <div class="product-details">
-                        <span class="product-cat">Industrial</span>
-                        <h4>Aluminum Enclosure Box</h4>
+                        <span class="product-cat" data-translate="filter_grills">Grills (ចង្កានអាំងសាច់)</span>
+                        <h4 data-translate="prod_6_title">Portable Camping Stove</h4>
+                        <p class="product-desc" data-translate="prod_6_desc">Compact stainless steel stove for travel.</p>
                         <div class="product-bottom">
-                            <span class="price">$85.50</span>
-                            <button class="btn-cart add-to-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+                            <span class="price">$45.00</span>
+                            <button class="btn-cart add-to-cart" data-translate="btn_add"><i class="fa-solid fa-cart-plus"></i> Add</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Product 6 -->
-                <div class="product-card fade-in" data-category="cnc">
-                    <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1616423640778-28d1b53229bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Machine Components">
-                        <span class="badge-sale">Sale</span>
-                    </div>
-                    <div class="product-details">
-                        <span class="product-cat">CNC Machining</span>
-                        <h4>Drive Shaft Component</h4>
-                        <div class="product-bottom">
-                            <span class="price"><span class="old-price">$200</span> $180</span>
-                            <button class="btn-cart add-to-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -185,19 +192,19 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <h3>LITTLEMAKER</h3>
-                    <p>Professional metal fabrication and engineering solutions tailored for the Cambodian market.</p>
+                    <p data-translate="footer_desc">Professional metal fabrication and engineering solutions tailored for the Cambodian market.</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Quick Links</h3>
+                    <h3 data-translate="footer_quick">Quick Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="products.html">Shop</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-translate="nav_home">Home</a></li>
+                        <li><a href="about.html" data-translate="nav_about">About Us</a></li>
+                        <li><a href="products.html" data-translate="nav_shop">Shop</a></li>
+                        <li><a href="contact.html" data-translate="nav_contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Contact</h3>
+                    <h3 data-translate="footer_contact">Contact</h3>
                     <div class="social-links">
                         <a href="https://t.me/samnangkhiev" target="_blank" class="nav-icon-btn telegram" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
                         <a href="https://facebook.com/littlemaker" target="_blank" class="nav-icon-btn facebook" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
@@ -206,7 +213,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 LittleMaker Cambodia. All Rights Reserved.</p>
+                <p data-translate="footer_copy">&copy; 2025 LittleMaker Cambodia. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

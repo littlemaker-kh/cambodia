@@ -19,30 +19,41 @@
                 <i class="fa-solid fa-gears"></i> LITTLEMAKER
             </a>
             
+            <!-- Desktop Menu -->
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active" data-translate="nav_home">Home</a></li>
+                <li><a href="about.html" class="nav-link" data-translate="nav_about">About Us</a></li>
+                <li><a href="services.html" class="nav-link" data-translate="nav_services">Services</a></li>
+                <li><a href="products.html" class="nav-link" data-translate="nav_shop">Shop</a></li>
+            </ul>
+
+            <!-- Right Controls -->
             <div class="nav-controls">
-                <div class="cart-wrapper mobile-only">
-                    <a href="#" class="cart-trigger"><i class="fa-solid fa-cart-shopping"></i></a>
-                    <span class="cart-badge mobile-cart-count">0</span>
+                <!-- Cart -->
+                <div class="cart-wrapper cart-trigger">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
                 </div>
+
+                <!-- Lang -->
+                <div class="lang-dropdown">
+                    <button class="lang-btn" id="langBtn">
+                        <i class="fa-solid fa-globe"></i> <span id="currentLang">EN</span>
+                    </button>
+                    <div class="lang-menu" id="langMenu">
+                        <a href="#" data-lang="en">English</a>
+                        <a href="#" data-lang="kh">ខ្មែរ</a>
+                        <a href="#" data-lang="cn">中文</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Toggle -->
                 <div class="menu-toggle" id="mobile-menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
             </div>
-
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
-                <li><a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
-                <li><a href="services.html" class="nav-link"><i class="fa-solid fa-screwdriver-wrench"></i> Services</a></li>
-                <li><a href="products.html" class="nav-link"><i class="fa-solid fa-shop"></i> Shop</a></li>
-                <li class="desktop-only">
-                    <a href="#" class="cart-wrapper cart-trigger">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="cart-badge" id="cart-count">0</span>
-                    </a>
-                </li>
-            </ul>
         </div>
     </nav>
 
@@ -50,11 +61,11 @@
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content container">
-            <h1 class="fade-in">Precision Metal & <br> <span class="highlight">Office Solutions</span></h1>
-            <p class="fade-in">From industrial CNC parts to premium steel office furniture. Quality manufacturing made in Cambodia.</p>
+            <h1 class="fade-in" data-translate="hero_title">Precision Metal & <br> <span class="highlight">Office Solutions</span></h1>
+            <p class="fade-in" data-translate="hero_desc">From industrial CNC parts to premium steel office furniture. Quality manufacturing made in Cambodia.</p>
             <div class="hero-buttons fade-in">
-                <a href="products.html" class="btn btn-primary">Shop Products</a>
-                <a href="contact.html" class="btn btn-outline">Request Quote</a>
+                <a href="products.html" class="btn btn-primary" data-translate="btn_shop">Shop Products</a>
+                <a href="contact.html" class="btn btn-outline" data-translate="btn_quote">Request Quote</a>
             </div>
         </div>
     </section>
@@ -63,25 +74,25 @@
     <section class="section-padding">
         <div class="container">
             <div class="section-header fade-in">
-                <h4 class="sub-heading">What We Do</h4>
-                <h2>Our Core Specialties</h2>
+                <h4 class="sub-heading" data-translate="feat_title">What We Do</h4>
+                <h2 data-translate="feat_sub">Our Core Specialties</h2>
             </div>
             <div class="row">
                 <div class="col-half fade-in">
                     <div class="feature-box" style="background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
                         <div class="box-overlay">
-                            <h3>Office Furniture</h3>
-                            <p>Modern desks, cabinets, and storage.</p>
-                            <a href="products.html" class="btn-link">View Catalog <i class="fa-solid fa-arrow-right"></i></a>
+                            <h3 data-translate="feat_off">Office Furniture</h3>
+                            <p data-translate="feat_off_desc">Modern desks, cabinets, and storage.</p>
+                            <a href="products.html" class="btn-link" data-translate="btn_view_cat">View Catalog <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-half fade-in">
                     <div class="feature-box" style="background-image: url('https://images.unsplash.com/photo-1565439398532-a548c772e73b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
                         <div class="box-overlay">
-                            <h3>Industrial Parts</h3>
-                            <p>CNC machining and custom metal fabrication.</p>
-                            <a href="services.html" class="btn-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                            <h3 data-translate="feat_ind">Industrial Parts</h3>
+                            <p data-translate="feat_ind_desc">CNC machining and custom metal fabrication.</p>
+                            <a href="services.html" class="btn-link" data-translate="btn_learn">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -92,10 +103,10 @@
     <!-- CTA Section -->
     <section class="cta-section section-padding bg-dark">
         <div class="container text-center">
-            <h2 class="text-white fade-in">Looking for Custom Fabrication?</h2>
-            <p class="text-grey fade-in">We handle bulk orders for offices and industrial projects.</p>
+            <h2 class="text-white fade-in" data-translate="cta_title">Looking for Custom Fabrication?</h2>
+            <p class="text-grey fade-in" data-translate="cta_desc">We handle bulk orders for offices and industrial projects.</p>
             <br>
-            <a href="contact.html" class="btn btn-primary fade-in">Contact Us Today</a>
+            <a href="contact.html" class="btn btn-primary fade-in" data-translate="btn_contact">Contact Us Today</a>
         </div>
     </section>
 
@@ -105,19 +116,19 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <h3>LITTLEMAKER</h3>
-                    <p>Professional metal fabrication and engineering solutions tailored for the Cambodian market.</p>
+                    <p data-translate="footer_desc">Professional metal fabrication and engineering solutions tailored for the Cambodian market.</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Quick Links</h3>
+                    <h3 data-translate="footer_quick">Quick Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="products.html">Shop</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-translate="nav_home">Home</a></li>
+                        <li><a href="about.html" data-translate="nav_about">About Us</a></li>
+                        <li><a href="products.html" data-translate="nav_shop">Shop</a></li>
+                        <li><a href="contact.html" data-translate="nav_contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Contact</h3>
+                    <h3 data-translate="footer_contact">Contact</h3>
                     <div class="social-links">
                         <a href="https://t.me/samnangkhiev" target="_blank" class="nav-icon-btn telegram" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
                         <a href="https://facebook.com/littlemaker" target="_blank" class="nav-icon-btn facebook" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
@@ -126,7 +137,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 LittleMaker Cambodia. All Rights Reserved.</p>
+                <p data-translate="footer_copy">&copy; 2025 LittleMaker Cambodia. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

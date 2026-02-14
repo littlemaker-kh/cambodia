@@ -17,37 +17,50 @@
             <a href="index.html" class="logo">
                 <i class="fa-solid fa-gears"></i> LITTLEMAKER
             </a>
+            
+            <!-- Desktop Menu -->
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link" data-translate="nav_home">Home</a></li>
+                <li><a href="about.html" class="nav-link active" data-translate="nav_about">About Us</a></li>
+                <li><a href="services.html" class="nav-link" data-translate="nav_services">Services</a></li>
+                <li><a href="products.html" class="nav-link" data-translate="nav_shop">Shop</a></li>
+            </ul>
+
+            <!-- Right Controls -->
             <div class="nav-controls">
-                <div class="cart-wrapper mobile-only">
-                    <a href="#" class="cart-trigger"><i class="fa-solid fa-cart-shopping"></i></a>
-                    <span class="cart-badge mobile-cart-count">0</span>
+                <!-- Cart -->
+                <div class="cart-wrapper cart-trigger">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
                 </div>
+
+                <!-- Lang -->
+                <div class="lang-dropdown">
+                    <button class="lang-btn" id="langBtn">
+                        <i class="fa-solid fa-globe"></i> <span id="currentLang">EN</span>
+                    </button>
+                    <div class="lang-menu" id="langMenu">
+                        <a href="#" data-lang="en">English</a>
+                        <a href="#" data-lang="kh">ខ្មែរ</a>
+                        <a href="#" data-lang="cn">中文</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Toggle -->
                 <div class="menu-toggle" id="mobile-menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
             </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
-                <li><a href="about.html" class="nav-link active"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
-                <li><a href="services.html" class="nav-link"><i class="fa-solid fa-screwdriver-wrench"></i> Services</a></li>
-                <li><a href="products.html" class="nav-link"><i class="fa-solid fa-shop"></i> Shop</a></li>
-                <li class="desktop-only">
-                    <a href="#" class="cart-wrapper cart-trigger">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="cart-badge" id="cart-count">0</span>
-                    </a>
-                </li>
-            </ul>
         </div>
     </nav>
 
     <!-- Page Header -->
     <header class="page-header">
         <div class="container">
-            <h1>About Our Company</h1>
-            <p>Leading the way in Cambodian Manufacturing</p>
+            <h1 data-translate="about_header">About Our Company</h1>
+            <p data-translate="about_sub">Leading the way in Cambodian Manufacturing</p>
         </div>
     </header>
 
@@ -59,14 +72,14 @@
                     <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Factory Floor" class="about-img">
                 </div>
                 <div class="col-half content-center fade-in">
-                    <h4 class="sub-heading">Who We Are</h4>
-                    <h2>Leading Metal Solutions in Cambodia</h2>
-                    <p>LITTLEMAKER CAMBODIA is a premier manufacturing partner specializing in high-quality metal components and modern office furniture. We combine local expertise with international manufacturing standards.</p>
-                    <p>Whether you need custom enclosures, heavy machinery parts, or delicate architectural metalwork, our team of engineers ensures perfection in every weld and cut.</p>
+                    <h4 class="sub-heading" data-translate="about_who">Who We Are</h4>
+                    <h2 data-translate="about_title">Leading Metal Solutions in Cambodia</h2>
+                    <p data-translate="about_p1">LITTLEMAKER CAMBODIA is a premier manufacturing partner specializing in high-quality metal components and modern office furniture. We combine local expertise with international manufacturing standards.</p>
+                    <p data-translate="about_p2">Whether you need custom enclosures, heavy machinery parts, or delicate architectural metalwork, our team of engineers ensures perfection in every weld and cut.</p>
                     <ul class="feature-list">
-                        <li><i class="fa-solid fa-check-circle"></i> ISO 9001 Compliant Processes</li>
-                        <li><i class="fa-solid fa-check-circle"></i> High Quality Office Furniture</li>
-                        <li><i class="fa-solid fa-check-circle"></i> Fast Delivery in Phnom Penh</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <span data-translate="feat_iso">ISO 9001 Compliant Processes</span></li>
+                        <li><i class="fa-solid fa-check-circle"></i> <span data-translate="feat_high">High Quality Office Furniture</span></li>
+                        <li><i class="fa-solid fa-check-circle"></i> <span data-translate="feat_fast">Fast Delivery in Phnom Penh</span></li>
                     </ul>
                 </div>
             </div>
@@ -80,17 +93,17 @@
                 <div class="service-card fade-in">
                     <div class="icon-box"><i class="fa-solid fa-users"></i></div>
                     <h3>50+</h3>
-                    <p>Skilled Engineers</p>
+                    <p data-translate="stat_eng">Skilled Engineers</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="icon-box"><i class="fa-solid fa-briefcase"></i></div>
                     <h3>500+</h3>
-                    <p>Projects Completed</p>
+                    <p data-translate="stat_proj">Projects Completed</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="icon-box"><i class="fa-solid fa-calendar-check"></i></div>
                     <h3>10 Years</h3>
-                    <p>Industry Experience</p>
+                    <p data-translate="stat_exp">Industry Experience</p>
                 </div>
             </div>
         </div>
@@ -101,19 +114,19 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <h3>LITTLEMAKER</h3>
-                    <p>Professional metal fabrication and engineering solutions tailored for the Cambodian market.</p>
+                    <p data-translate="footer_desc">Professional metal fabrication and engineering solutions tailored for the Cambodian market.</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Quick Links</h3>
+                    <h3 data-translate="footer_quick">Quick Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="products.html">Shop</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-translate="nav_home">Home</a></li>
+                        <li><a href="about.html" data-translate="nav_about">About Us</a></li>
+                        <li><a href="products.html" data-translate="nav_shop">Shop</a></li>
+                        <li><a href="contact.html" data-translate="nav_contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Contact</h3>
+                    <h3 data-translate="footer_contact">Contact</h3>
                     <div class="social-links">
                         <a href="https://t.me/samnangkhiev" target="_blank" class="nav-icon-btn telegram" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
                         <a href="https://facebook.com/littlemaker" target="_blank" class="nav-icon-btn facebook" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
@@ -122,7 +135,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 LittleMaker Cambodia. All Rights Reserved.</p>
+                <p data-translate="footer_copy">&copy; 2025 LittleMaker Cambodia. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

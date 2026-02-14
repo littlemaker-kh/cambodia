@@ -16,36 +16,49 @@
             <a href="index.html" class="logo">
                 <i class="fa-solid fa-gears"></i> LITTLEMAKER
             </a>
+            
+            <!-- Desktop Menu -->
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link" data-translate="nav_home">Home</a></li>
+                <li><a href="about.html" class="nav-link" data-translate="nav_about">About Us</a></li>
+                <li><a href="services.html" class="nav-link active" data-translate="nav_services">Services</a></li>
+                <li><a href="products.html" class="nav-link" data-translate="nav_shop">Shop</a></li>
+            </ul>
+
+            <!-- Right Controls -->
             <div class="nav-controls">
-                <div class="cart-wrapper mobile-only">
-                    <a href="#" class="cart-trigger"><i class="fa-solid fa-cart-shopping"></i></a>
-                    <span class="cart-badge mobile-cart-count">0</span>
+                <!-- Cart -->
+                <div class="cart-wrapper cart-trigger">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
                 </div>
+
+                <!-- Lang -->
+                <div class="lang-dropdown">
+                    <button class="lang-btn" id="langBtn">
+                        <i class="fa-solid fa-globe"></i> <span id="currentLang">EN</span>
+                    </button>
+                    <div class="lang-menu" id="langMenu">
+                        <a href="#" data-lang="en">English</a>
+                        <a href="#" data-lang="kh">ខ្មែរ</a>
+                        <a href="#" data-lang="cn">中文</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Toggle -->
                 <div class="menu-toggle" id="mobile-menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
             </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
-                <li><a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
-                <li><a href="services.html" class="nav-link active"><i class="fa-solid fa-screwdriver-wrench"></i> Services</a></li>
-                <li><a href="products.html" class="nav-link"><i class="fa-solid fa-shop"></i> Shop</a></li>
-                <li class="desktop-only">
-                    <a href="#" class="cart-wrapper cart-trigger">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="cart-badge" id="cart-count">0</span>
-                    </a>
-                </li>
-            </ul>
         </div>
     </nav>
 
     <header class="page-header">
         <div class="container">
-            <h1>Our Capabilities</h1>
-            <p>Advanced Technology Meets Skilled Craftsmanship</p>
+            <h1 data-translate="serv_header">Our Capabilities</h1>
+            <p data-translate="serv_sub">Advanced Technology Meets Skilled Craftsmanship</p>
         </div>
     </header>
 
@@ -56,43 +69,43 @@
                     <div class="icon-box">
                         <i class="fa-solid fa-microchip"></i>
                     </div>
-                    <h3>CNC Machining</h3>
-                    <p>High-precision milling and turning for complex geometries using steel, aluminum, and brass.</p>
+                    <h3 data-translate="serv_cnc">CNC Machining</h3>
+                    <p data-translate="serv_cnc_desc">High-precision milling and turning for complex geometries using steel, aluminum, and brass.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="icon-box">
                         <i class="fa-solid fa-scissors"></i>
                     </div>
-                    <h3>Laser Cutting</h3>
-                    <p>State-of-the-art fiber laser cutting for sheet metal with clean edges and tight tolerances.</p>
+                    <h3 data-translate="serv_laser">Laser Cutting</h3>
+                    <p data-translate="serv_laser_desc">State-of-the-art fiber laser cutting for sheet metal with clean edges and tight tolerances.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="icon-box">
                         <i class="fa-solid fa-fire-burner"></i>
                     </div>
-                    <h3>Welding & Fab</h3>
-                    <p>MIG, TIG, and Spot welding services by certified welders for structural integrity.</p>
+                    <h3 data-translate="serv_weld">Welding & Fab</h3>
+                    <p data-translate="serv_weld_desc">MIG, TIG, and Spot welding services by certified welders for structural integrity.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="icon-box">
                         <i class="fa-solid fa-spray-can"></i>
                     </div>
-                    <h3>Finishing</h3>
-                    <p>Powder coating, anodizing, and galvanizing to ensure durability and aesthetic appeal.</p>
+                    <h3 data-translate="serv_finish">Finishing</h3>
+                    <p data-translate="serv_finish_desc">Powder coating, anodizing, and galvanizing to ensure durability and aesthetic appeal.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="icon-box">
                         <i class="fa-solid fa-compass-drafting"></i>
                     </div>
-                    <h3>CAD Design</h3>
-                    <p>Professional engineering design services to turn your concept sketches into manufacturing-ready blueprints.</p>
+                    <h3 data-translate="serv_cad">CAD Design</h3>
+                    <p data-translate="serv_cad_desc">Professional engineering design services to turn your concept sketches into manufacturing-ready blueprints.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="icon-box">
                         <i class="fa-solid fa-wrench"></i>
                     </div>
-                    <h3>Assembly</h3>
-                    <p>Full product assembly and packaging services for retail-ready delivery.</p>
+                    <h3 data-translate="serv_ass">Assembly</h3>
+                    <p data-translate="serv_ass_desc">Full product assembly and packaging services for retail-ready delivery.</p>
                 </div>
             </div>
         </div>
@@ -103,19 +116,19 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <h3>LITTLEMAKER</h3>
-                    <p>Professional metal fabrication and engineering solutions tailored for the Cambodian market.</p>
+                    <p data-translate="footer_desc">Professional metal fabrication and engineering solutions tailored for the Cambodian market.</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Quick Links</h3>
+                    <h3 data-translate="footer_quick">Quick Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="products.html">Shop</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-translate="nav_home">Home</a></li>
+                        <li><a href="about.html" data-translate="nav_about">About Us</a></li>
+                        <li><a href="products.html" data-translate="nav_shop">Shop</a></li>
+                        <li><a href="contact.html" data-translate="nav_contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Contact</h3>
+                    <h3 data-translate="footer_contact">Contact</h3>
                     <div class="social-links">
                         <a href="https://t.me/samnangkhiev" target="_blank" class="nav-icon-btn telegram" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
                         <a href="https://facebook.com/littlemaker" target="_blank" class="nav-icon-btn facebook" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
@@ -124,7 +137,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 LittleMaker Cambodia. All Rights Reserved.</p>
+                <p data-translate="footer_copy">&copy; 2025 LittleMaker Cambodia. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
