@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | LITTLEMAKER CAMBODIA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-gears"></i> LITTLEMAKER
+            </a>
+            <div class="nav-controls">
+                <div class="cart-wrapper mobile-only">
+                    <a href="#" class="cart-trigger"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <span class="cart-badge mobile-cart-count">0</span>
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+                <li><a href="services.html" class="nav-link"><i class="fa-solid fa-screwdriver-wrench"></i> Services</a></li>
+                <li><a href="products.html" class="nav-link active"><i class="fa-solid fa-shop"></i> Shop</a></li>
+                <li class="desktop-only">
+                    <a href="#" class="cart-wrapper cart-trigger">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-badge" id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Product Catalog</h1>
+            <p>Quality Metal Parts & Office Furniture</p>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container">
+            
+            <!-- Filter Buttons -->
+            <div class="filter-container fade-in">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="office">Office Furniture</button>
+                <button class="filter-btn" data-filter="cnc">CNC Parts</button>
+                <button class="filter-btn" data-filter="industrial">Industrial</button>
+                <button class="filter-btn" data-filter="welding">Construction</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid">
+
+                <!-- NEW: Office Product 1 -->
+                <div class="product-card fade-in" data-category="office">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Office Desk">
+                        <span class="badge-new">New</span>
+                    </div>
+                    <div class="product-details">
+                        <span class="product-cat">Office Furniture</span>
+                        <h4>Modern Executive Desk</h4>
+                        <p class="product-desc">Minimalist steel frame desk with wooden top.</p>
+                        <div class="product-bottom">
+                            <span class="price">$185.00</span>
+                            <button class="btn-cart add-to-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW: Office Product 2 -->
+                <div class="product-card fade-in" data-category="office">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="File Cabinet">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-cat">Office Furniture</span>
+                        <h4>Steel File Cabinet (3-Drawer)</h4>
+                        <p class="product-desc">Secure storage with locking mechanism.</p>
+                        <div class="product-bottom">
+                            <span class="price">$95.00</span>
+                            <button class="btn-cart add-to-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW: Office Product 3 -->
+                <div class="product-card fade-in" data-category="office">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Meeting Table">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-cat">Office Furniture</span>
+                        <h4>Conference Table (8 Seats)</h4>
+                        <p class="product-desc">Durable metal legs with glass or wood top.</p>
+                        <div class="product-bottom">
+                            <span class="price">$450.00</span>
+                            <button class="btn-cart add-to-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="product-card fade-in" data-category="cnc">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1535295972055-1c762f4483e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Precision Gears">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-cat">CNC Machining</span>
+                        <h4>Precision Steel Gear</h4>
+                        <div class="product-bottom">
+                            <span class="price">$45.00</span>
+                            <button class="btn-cart add-to-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card fade-in" data-category="welding">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Structural Frame">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-cat">Construction</span>
+                        <h4>Heavy Duty Beam Bracket</h4>
+                        <div class="product-bottom">
+                            <span class="price">$120.00</span>
+                            <button class="btn-cart add-to-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card fade-in" data-category="industrial">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1622634479261-75890250761d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Custom Enclosure">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-cat">Industrial</span>
+                        <h4>Aluminum Enclosure Box</h4>
+                        <div class="product-bottom">
+                            <span class="price">$85.50</span>
+                            <button class="btn-cart add-to-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card fade-in" data-category="cnc">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1616423640778-28d1b53229bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Machine Components">
+                        <span class="badge-sale">Sale</span>
+                    </div>
+                    <div class="product-details">
+                        <span class="product-cat">CNC Machining</span>
+                        <h4>Drive Shaft Component</h4>
+                        <div class="product-bottom">
+                            <span class="price"><span class="old-price">$200</span> $180</span>
+                            <button class="btn-cart add-to-cart"><i class="fa-solid fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Item added to cart!</div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>LITTLEMAKER</h3>
+                    <p>Professional metal fabrication and engineering solutions tailored for the Cambodian market.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <div class="social-links">
+                        <a href="https://t.me/samnangkhiev" target="_blank" class="nav-icon-btn telegram" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://facebook.com/littlemaker" target="_blank" class="nav-icon-btn facebook" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="tel:+855719716888" class="nav-icon-btn phone" title="Call Us"><i class="fa-solid fa-phone"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LittleMaker Cambodia. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
