@@ -287,6 +287,31 @@ const translations = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Theme Switcher Logic ---
+    const themeBtn = document.getElementById('themeBtn');
+    
+    const applyTheme = (theme) => {
+        if (theme === 'dark') {
+            document.body.classList.add('dark-mode');
+            if(themeBtn) themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+        } else {
+            document.body.classList.remove('dark-mode');
+            if(themeBtn) themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+        }
+    };
+
+    const savedTheme = localStorage.getItem('lm_theme_pref') || 'light';
+    applyTheme(savedTheme);
+
+    if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            const isDark = document.body.classList.contains('dark-mode');
+            const newTheme = isDark ? 'light' : 'dark';
+            localStorage.setItem('lm_theme_pref', newTheme);
+            applyTheme(newTheme);
+        });
+    }
+
     // --- Language Switcher Logic ---
     const langBtn = document.getElementById('langBtn');
     const langMenu = document.getElementById('langMenu');
@@ -487,7 +512,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span>Total:</span>
                     <span id="cartTotal">$0.00</span>
                 </div>
-                <button class="btn btn-outline" id="viewInvBtn" style="color:#333; border-color:#ccc; width:100%; margin-bottom:15px;">View Invoice</button>
+                <button class="btn btn-outline" id="viewInvBtn" style="color:var(--text-color); border-color:var(--text-muted); width:100%; margin-bottom:15px;">View Invoice</button>
                 
                 <div class="cart-actions">
                     <button class="social-checkout-btn btn-telegram" id="checkoutTeleg">
@@ -516,7 +541,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Invoice Table -->
         </div>
         <div class="invoice-actions">
-            <button class="btn btn-outline" id="closeInvBtn" style="color:#333; border-color:#ccc;">Close</button>
+            <button class="btn btn-outline" id="closeInvBtn" style="color:var(--text-color); border-color:var(--text-muted);">Close</button>
             <button class="btn btn-primary" onclick="window.print()">Print</button>
         </div>
     </div>`;
@@ -543,7 +568,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let total = 0;
 
         if (cart.length === 0) {
-            cartItemsContainer.innerHTML = '<p style="text-align:center; margin-top: 20px; color:#666;">Your cart is empty.</p>';
+            cartItemsContainer.innerHTML = '<p style="text-align:center; margin-top: 20px; color:var(--text-muted);">Your cart is empty.</p>';
         } else {
             cart.forEach((item, index) => {
                 const itemTotal = item.price * item.qty;
