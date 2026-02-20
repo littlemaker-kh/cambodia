@@ -60,9 +60,9 @@ const translations = {
         prod_sub: "Quality Tables, Cabinets & Grills",
         search_ph: "Search products...",
         filter_all: "All",
-        filter_tables: "Tables (តុ)",
-        filter_cabinets: "Cabinets (ទូរ)",
-        filter_grills: "Grills (ចង្កានអាំងសាច់)",
+        filter_tables: "Tables",
+        filter_cabinets: "Cabinets",
+        filter_grills: "Grills",
         prod_1_title: "Modern Executive Desk",
         prod_1_desc: "Minimalist steel frame desk with wooden top.",
         prod_2_title: "Steel File Cabinet (3-Drawer)",
@@ -87,7 +87,12 @@ const translations = {
         ph_email: "Your Email",
         ph_subj: "Subject / Product Inquiry",
         ph_msg: "Project Details or Order Request",
-        btn_send: "Send Message"
+        btn_send: "Send Message",
+        cont_email: "Email",
+        cont_fb: "Facebook",
+        cont_tg: "Telegram",
+        cont_phone: "Phone",
+        cont_loc: "Location"
     },
     kh: {
         nav_home: "ទំព័រដើម",
@@ -177,7 +182,12 @@ const translations = {
         ph_email: "អ៊ីមែលរបស់អ្នក",
         ph_subj: "ប្រធានបទ / ការសាកសួរផលិតផល",
         ph_msg: "ព័ត៌មានលម្អិតគម្រោងឬសំណើបញ្ជាទិញ",
-        btn_send: "ផ្ញើសារ"
+        btn_send: "ផ្ញើសារ",
+        cont_email: "អ៊ីមែល",
+        cont_fb: "ហ្វេសប៊ុក",
+        cont_tg: "តេឡេក្រាម",
+        cont_phone: "ទូរស័ព្ទ",
+        cont_loc: "ទីតាំង"
     },
     cn: {
         nav_home: "首页",
@@ -267,7 +277,12 @@ const translations = {
         ph_email: "您的电子邮件",
         ph_subj: "主题 / 产品咨询",
         ph_msg: "项目详情或订单请求",
-        btn_send: "发送信息"
+        btn_send: "发送信息",
+        cont_email: "电子邮件",
+        cont_fb: "Facebook",
+        cont_tg: "Telegram",
+        cont_phone: "电话",
+        cont_loc: "位置"
     }
 };
 

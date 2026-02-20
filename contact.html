@@ -19,10 +19,11 @@
             
             <!-- Desktop Menu -->
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link" data-translate="nav_home">Home</a></li>
-                <li><a href="about.html" class="nav-link" data-translate="nav_about">About Us</a></li>
-                <li><a href="services.html" class="nav-link" data-translate="nav_services">Services</a></li>
-                <li><a href="products.html" class="nav-link" data-translate="nav_shop">Shop</a></li>
+                <li><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> <span data-translate="nav_home">Home</span></a></li>
+                <li><a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i> <span data-translate="nav_about">About Us</span></a></li>
+                <li><a href="services.html" class="nav-link"><i class="fa-solid fa-screwdriver-wrench"></i> <span data-translate="nav_services">Services</span></a></li>
+                <li><a href="products.html" class="nav-link"><i class="fa-solid fa-shop"></i> <span data-translate="nav_shop">Shop</span></a></li>
+                <li class="mobile-only"><a href="contact.html" class="nav-link"><i class="fa-solid fa-envelope"></i> <span data-translate="nav_contact">Contact</span></a></li>
             </ul>
 
             <!-- Right Controls -->
@@ -70,19 +71,27 @@
                     <h2 data-translate="cont_ready">Ready to Start Your Project?</h2>
                     <p data-translate="cont_desc">Contact us today for a free consultation or bulk order quote. We respond within 24 hours.</p>
                     
-                    <div class="contact-info">
-                        <div class="info-item">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>Phnom Penh Special Economic Zone, Cambodia</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fa-solid fa-phone"></i>
-                            <span>+855 12 345 678</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fa-solid fa-envelope"></i>
-                            <span>sales@littlemaker.com.kh</span>
-                        </div>
+                    <div class="contact-buttons-grid">
+                        <a href="mailto:sales@littlemaker.com.kh" class="contact-btn email">
+                            <div class="icon-wrapper"><i class="fa-solid fa-envelope"></i></div>
+                            <span data-translate="cont_email">Email</span>
+                        </a>
+                        <a href="https://facebook.com/littlemaker" target="_blank" class="contact-btn facebook">
+                            <div class="icon-wrapper"><i class="fa-brands fa-facebook"></i></div>
+                            <span data-translate="cont_fb">Facebook</span>
+                        </a>
+                        <a href="https://t.me/samnangkhiev" target="_blank" class="contact-btn telegram">
+                            <div class="icon-wrapper"><i class="fa-brands fa-telegram"></i></div>
+                            <span data-translate="cont_tg">Telegram</span>
+                        </a>
+                        <a href="tel:+855719716888" class="contact-btn phone">
+                            <div class="icon-wrapper"><i class="fa-solid fa-phone"></i></div>
+                            <span data-translate="cont_phone">Phone</span>
+                        </a>
+                        <a href="https://goo.gl/maps/placeholder" target="_blank" class="contact-btn location">
+                            <div class="icon-wrapper"><i class="fa-solid fa-location-dot"></i></div>
+                            <span data-translate="cont_loc">Location</span>
+                        </a>
                     </div>
                 </div>
                 <div class="col-half fade-in">
