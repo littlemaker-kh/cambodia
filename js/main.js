@@ -63,19 +63,16 @@ const translations = {
         filter_tables: "Tables",
         filter_cabinets: "Cabinets",
         filter_grills: "Grills",
-        prod_1_title: "Modern Executive Desk",
-        prod_1_desc: "Minimalist steel frame desk with wooden top.",
-        prod_2_title: "Steel File Cabinet (3-Drawer)",
-        prod_2_desc: "Secure storage with locking mechanism.",
-        prod_3_title: "Conference Table (8 Seats)",
-        prod_3_desc: "Durable metal legs with glass or wood top.",
-        prod_4_title: "Premium BBQ Grill Stand",
-        prod_4_desc: "Heavy duty steel charcoal grill for outdoor parties.",
-        prod_5_title: "Industrial Metal Locker",
-        prod_5_desc: "Single door locker for workshop or gym.",
-        prod_6_title: "Portable Camping Stove",
-        prod_6_desc: "Compact stainless steel stove for travel.",
         btn_add: "<i class='fa-solid fa-cart-plus'></i> Add",
+
+        // Product Detail Page
+        btn_add_cart: "Add to Cart",
+        btn_buy_now: "Buy Now",
+        btn_chat: "Chat",
+        lbl_quantity: "Quantity:",
+        tab_desc: "Description",
+        tab_specs: "Specifications",
+        related_prod: "Related Products",
 
         // Contact Page
         cont_header: "Contact Us",
@@ -158,19 +155,16 @@ const translations = {
         filter_tables: "តុ",
         filter_cabinets: "ទូ",
         filter_grills: "ចង្ក្រានអាំង",
-        prod_1_title: "តុការិយាល័យទំនើប",
-        prod_1_desc: "តុដែកដែលមានស៊ុមដែកនិងផ្ទៃខាងលើឈើ។",
-        prod_2_title: "ទូឯកសារដែក (៣ ថត)",
-        prod_2_desc: "ការផ្ទុកមានសុវត្ថិភាពជាមួយយន្តការចាក់សោ។",
-        prod_3_title: "តុប្រជុំ (៨ កៅអី)",
-        prod_3_desc: "ជើងដែកជាប់ធន់ជាមួយផ្ទៃកញ្ចក់ឬឈើ។",
-        prod_4_title: "ចង្ក្រានអាំងសាច់ធុនធ្ងន់",
-        prod_4_desc: "ចង្ក្រានធ្យូងដែកធុនធ្ងន់សម្រាប់ការជប់លៀងក្រៅផ្ទះ។",
-        prod_5_title: "ទូដាក់សម្ភារៈឧស្សាហកម្ម",
-        prod_5_desc: "ទូទ្វារតែមួយសម្រាប់រោងជាងឬកន្លែងហាត់ប្រាណ។",
-        prod_6_title: "ចង្ក្រានបោះជំរុំចល័ត",
-        prod_6_desc: "ចង្ក្រានដែកអ៊ីណុកតូចសម្រាប់ការធ្វើដំណើរ។",
         btn_add: "<i class='fa-solid fa-cart-plus'></i> បញ្ចូល",
+
+        // Product Detail Page
+        btn_add_cart: "បញ្ចូលកន្ត្រក",
+        btn_buy_now: "ទិញឥឡូវនេះ",
+        btn_chat: "ជជែកជាមួយអ្នកលក់",
+        lbl_quantity: "ចំនួន:",
+        tab_desc: "ការពិពណ៌នា",
+        tab_specs: "លក្ខណៈបច្ចេកទេស",
+        related_prod: "ផលិតផលពាក់ព័ន្ធ",
 
         // Contact Page
         cont_header: "ទាក់ទងមកយើង",
@@ -253,19 +247,16 @@ const translations = {
         filter_tables: "桌子",
         filter_cabinets: "柜子",
         filter_grills: "烤架",
-        prod_1_title: "现代行政办公桌",
-        prod_1_desc: "极简钢架办公桌，配木质桌面。",
-        prod_2_title: "钢制文件柜（3抽屉）",
-        prod_2_desc: "带锁定机制的安全存储。",
-        prod_3_title: "会议桌（8座）",
-        prod_3_desc: "耐用的金属腿，配玻璃或木质桌面。",
-        prod_4_title: "高级烧烤架",
-        prod_4_desc: "重型钢制木炭烤架，适合户外聚会。",
-        prod_5_title: "工业金属储物柜",
-        prod_5_desc: "适用于车间或健身房的单门储物柜。",
-        prod_6_title: "便携式露营炉",
-        prod_6_desc: "紧凑型不锈钢炉，适合旅行。",
         btn_add: "<i class='fa-solid fa-cart-plus'></i> 添加",
+        
+        // Product Detail Page
+        btn_add_cart: "加入购物车",
+        btn_buy_now: "立即购买",
+        btn_chat: "联系卖家",
+        lbl_quantity: "数量:",
+        tab_desc: "描述",
+        tab_specs: "规格",
+        related_prod: "相关产品",
 
         // Contact Page
         cont_header: "联系我们",
@@ -284,6 +275,151 @@ const translations = {
         cont_phone: "电话",
         cont_loc: "位置"
     }
+};
+
+// --- Product Data Source ---
+const productsDB = [
+    {
+        id: 1,
+        category: 'tables',
+        title: "Modern Executive Desk",
+        price: 185.00,
+        image: "images/desk_exec.jpg",
+        gallery: ["images/desk_exec.jpg", "images/desk_exec_side.jpg", "images/desk_exec_top.jpg"],
+        desc: "Minimalist steel frame desk with wooden top. Perfect for modern offices.",
+        specs: {
+            "Dimensions": "140x70cm",
+            "Material": "Steel & Plywood",
+            "Color": "Black / Oak",
+            "Warranty": "1 Year"
+        },
+        new: true
+    },
+    {
+        id: 2,
+        category: 'cabinets',
+        title: "Steel File Cabinet (3-Drawer)",
+        price: 95.00,
+        image: "images/cabinet_3drawer.jpg",
+        gallery: ["images/cabinet_3drawer.jpg", "images/cabinet_open.jpg"],
+        desc: "Secure storage with locking mechanism. Heavy duty rails.",
+        specs: {
+             "Dimensions": "40x50x65cm",
+             "Color": "Grey / White",
+             "Drawers": "3",
+             "Lock Type": "Key Lock"
+        }
+    },
+    {
+        id: 3,
+        category: 'tables',
+        title: "Conference Table (8 Seats)",
+        price: 450.00,
+        image: "images/table_conf.jpg",
+        gallery: ["images/table_conf.jpg", "images/table_conf_detail.jpg"],
+        desc: "Durable metal legs with glass or wood top. Fits 8-10 people.",
+        specs: {
+            "Length": "2.4m",
+            "Width": "1.2m",
+            "Seating": "8-10 People",
+            "Material": "Steel & Tempered Glass"
+        }
+    },
+    {
+        id: 4,
+        category: 'grills',
+        title: "Premium BBQ Grill Stand",
+        price: 250.00,
+        image: "images/grill_stand.jpg",
+        gallery: ["images/grill_stand.jpg", "images/grill_active.jpg"],
+        desc: "Heavy duty steel charcoal grill for outdoor parties. Adjustable height.",
+        specs: {
+            "Material": "Stainless Steel 304",
+            "Fuel Type": "Charcoal",
+            "Weight": "15kg",
+            "Features": "Adjustable Height"
+        },
+        sale: true
+    },
+    {
+        id: 5,
+        category: 'cabinets',
+        title: "Industrial Metal Locker",
+        price: 120.00,
+        image: "images/locker_ind.jpg",
+        gallery: ["images/locker_ind.jpg", "images/locker_inside.jpg"],
+        desc: "Single door locker for workshop or gym. Ventilated design.",
+        specs: {
+            "Height": "180cm",
+            "Width": "38cm",
+            "Depth": "45cm",
+            "Material": "Cold Rolled Steel"
+        }
+    },
+    {
+        id: 6,
+        category: 'grills',
+        title: "Portable Camping Stove",
+        price: 45.00,
+        image: "images/stove_camp.jpg",
+        gallery: ["images/stove_camp.jpg", "images/stove_folded.jpg"],
+        desc: "Compact stainless steel stove for travel. Foldable legs.",
+        specs: {
+            "Weight": "1.5kg",
+            "Fuel": "Charcoal / Wood",
+            "Folded Size": "20x20x5cm",
+            "Material": "Stainless Steel"
+        }
+    }
+];
+
+// Global variables for slider
+window.currentGallery = [];
+window.currentIndex = 0;
+
+// Slider Navigation Function
+window.moveSlide = function(step) {
+    if (window.currentGallery.length === 0) return;
+    
+    window.currentIndex += step;
+    
+    // Loop logic
+    if (window.currentIndex >= window.currentGallery.length) {
+        window.currentIndex = 0;
+    }
+    if (window.currentIndex < 0) {
+        window.currentIndex = window.currentGallery.length - 1;
+    }
+    
+    const mainImg = document.getElementById('mainImg');
+    if(mainImg) {
+        mainImg.src = window.currentGallery[window.currentIndex];
+    }
+    
+    // Update thumbnails active state
+    document.querySelectorAll('.thumb-item').forEach((thumb, idx) => {
+        if (idx === window.currentIndex) {
+            thumb.classList.add('active');
+        } else {
+            thumb.classList.remove('active');
+        }
+    });
+};
+
+// Set Image from Thumbnail
+window.setImage = function(index) {
+    window.currentIndex = index;
+    const mainImg = document.getElementById('mainImg');
+    if(mainImg && window.currentGallery[index]) {
+        mainImg.src = window.currentGallery[index];
+    }
+    document.querySelectorAll('.thumb-item').forEach((thumb, idx) => {
+        if (idx === index) {
+            thumb.classList.add('active');
+        } else {
+            thumb.classList.remove('active');
+        }
+    });
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -400,6 +536,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const href = link.getAttribute('href');
         if (href === pageName) {
             link.classList.add('active');
+        } else if (pageName === 'product-detail.html' && href === 'products.html') {
+            link.classList.add('active'); // Keep Shop active when on detail page
         } else {
             link.classList.remove('active');
         }
@@ -440,6 +578,189 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Products Render Logic ---
+    const shopGrid = document.getElementById('shop-products-grid');
+    if (shopGrid) {
+        shopGrid.innerHTML = '';
+        productsDB.forEach(prod => {
+            const badge = prod.new ? `<span class="badge-new">New</span>` : (prod.sale ? `<span class="badge-sale">Hot</span>` : '');
+            const html = `
+            <div class="product-card fade-in" data-category="${prod.category}">
+                <a href="product-detail.html?id=${prod.id}">
+                    <div class="product-img">
+                        <img src="${prod.image}" alt="${prod.title}" loading="lazy" onerror="this.onerror=null;this.src='images/no-image.png';">
+                        ${badge}
+                    </div>
+                </a>
+                <div class="product-details">
+                    <span class="product-cat" data-translate="filter_${prod.category}">${prod.category}</span>
+                    <a href="product-detail.html?id=${prod.id}">
+                        <h4>${prod.title}</h4>
+                    </a>
+                    <p class="product-desc">${prod.desc}</p>
+                    <div class="product-bottom">
+                        <span class="price">$${prod.price.toFixed(2)}</span>
+                        <button class="btn-cart add-to-cart-db" data-id="${prod.id}" data-translate="btn_add"><i class="fa-solid fa-cart-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>`;
+            shopGrid.insertAdjacentHTML('beforeend', html);
+        });
+        updatePageContent(localStorage.getItem('lm_lang_pref') || 'en');
+    }
+
+    // --- Product Detail Render Logic ---
+    const detailContainer = document.getElementById('product-detail-container');
+    if (detailContainer) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const prodId = parseInt(urlParams.get('id'));
+        const product = productsDB.find(p => p.id === prodId);
+
+        if (product) {
+            // Update Breadcrumb
+            document.getElementById('breadcrumb-title').textContent = product.title;
+
+            // Initialize Global State for Slider
+            window.currentGallery = product.gallery;
+            window.currentIndex = 0;
+
+            // Render Gallery HTML with Slider Controls
+            let galleryHTML = `
+            <div class="main-image-container">
+                <button class="slider-btn prev" onclick="moveSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="main-image">
+                    <img id="mainImg" src="${product.image}" alt="${product.title}" onerror="this.onerror=null;this.src='images/no-image.png';">
+                </div>
+                <button class="slider-btn next" onclick="moveSlide(1)"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <div class="thumb-list">`;
+            
+            product.gallery.forEach((img, idx) => {
+                 galleryHTML += `<div class="thumb-item ${idx===0?'active':''}" onclick="setImage(${idx})"><img src="${img}" onerror="this.onerror=null;this.src='images/no-image.png';"></div>`;
+            });
+            galleryHTML += `</div>`;
+
+            // Render Specs Table
+            let specsHTML = `<table class="specs-table"><tbody>`;
+            if (typeof product.specs === 'object') {
+                for (const [key, value] of Object.entries(product.specs)) {
+                    specsHTML += `<tr><th>${key}</th><td>${value}</td></tr>`;
+                }
+            } else {
+                specsHTML += `<tr><td>${product.specs}</td></tr>`;
+            }
+            specsHTML += `</tbody></table>`;
+
+            // Render content
+            detailContainer.innerHTML = `
+            <div class="product-detail-wrapper">
+                <div class="product-gallery">
+                    ${galleryHTML}
+                </div>
+                <div class="product-info">
+                    <h1>${product.title}</h1>
+                    <div class="price-tag">$${product.price.toFixed(2)}</div>
+                    <div class="stock-status"><i class="fa-solid fa-check"></i> In Stock</div>
+                    
+                    <p class="short-desc">${product.desc}</p>
+
+                    <div class="quantity-selector">
+                        <span data-translate="lbl_quantity">Quantity:</span>
+                        <div class="qty-controls">
+                            <button class="qty-btn minus-detail">-</button>
+                            <input type="number" value="1" id="detailQty" readonly class="qty-input">
+                            <button class="qty-btn plus-detail">+</button>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn-action add-cart" id="detailAddCart" data-translate="btn_add_cart">Add to Cart</button>
+                        <button class="btn-action buy-now" id="detailBuyNow" data-translate="btn_buy_now">Buy Now</button>
+                    </div>
+                    
+                    <a href="https://t.me/samnangkhiev" target="_blank" class="chat-seller-btn">
+                        <i class="fa-brands fa-telegram"></i> <span data-translate="btn_chat">Chat with Seller</span>
+                    </a>
+                </div>
+            </div>
+            <div class="product-tabs">
+                <div class="tab-headers">
+                    <button class="tab-btn active" onclick="openTab(event, 'desc')" data-translate="tab_desc">Description</button>
+                    <button class="tab-btn" onclick="openTab(event, 'specs')" data-translate="tab_specs">Specifications</button>
+                </div>
+                <div id="desc" class="tab-content" style="display:block;">
+                    <p>${product.desc}</p>
+                </div>
+                <div id="specs" class="tab-content">
+                    ${specsHTML}
+                </div>
+            </div>`;
+            
+            // Render Related Products
+            const relatedGrid = document.getElementById('related-products-grid');
+            const related = productsDB.filter(p => p.category === product.category && p.id !== product.id).slice(0, 3);
+            related.forEach(p => {
+                 relatedGrid.insertAdjacentHTML('beforeend', `
+                    <div class="product-card">
+                         <a href="product-detail.html?id=${p.id}">
+                            <div class="product-img" style="height:150px;">
+                                <img src="${p.image}" alt="${p.title}" loading="lazy" onerror="this.onerror=null;this.src='images/no-image.png';">
+                            </div>
+                         </a>
+                        <div class="product-details" style="padding:10px;">
+                            <a href="product-detail.html?id=${p.id}">
+                                <h4 style="font-size:0.9rem;">${p.title}</h4>
+                            </a>
+                            <div class="price" style="font-size:1rem;">$${p.price.toFixed(2)}</div>
+                        </div>
+                    </div>
+                 `);
+            });
+            
+            // Mobile Sticky Bar Handlers
+            const mobAdd = document.getElementById('mobile-add-cart');
+            const mobBuy = document.getElementById('mobile-buy-now');
+            if(mobAdd) mobAdd.addEventListener('click', () => document.getElementById('detailAddCart').click());
+            if(mobBuy) mobBuy.addEventListener('click', () => document.getElementById('detailBuyNow').click());
+
+            // Qty Logic
+            const qtyInput = document.getElementById('detailQty');
+            document.querySelector('.minus-detail').addEventListener('click', () => {
+                let v = parseInt(qtyInput.value);
+                if(v > 1) qtyInput.value = v - 1;
+            });
+            document.querySelector('.plus-detail').addEventListener('click', () => {
+                let v = parseInt(qtyInput.value);
+                qtyInput.value = v + 1;
+            });
+
+            // Add To Cart Logic (Detail Page)
+            const addToCartHandler = (isBuyNow) => {
+                const qty = parseInt(qtyInput.value);
+                addToCart(product.id, qty);
+                if(isBuyNow) {
+                     const cartModal = document.getElementById('cartModal');
+                     renderCart();
+                     cartModal.classList.add('open');
+                }
+            };
+
+            document.getElementById('detailAddCart').addEventListener('click', () => addToCartHandler(false));
+            document.getElementById('detailBuyNow').addEventListener('click', () => addToCartHandler(true));
+
+            updatePageContent(localStorage.getItem('lm_lang_pref') || 'en');
+        } else {
+            detailContainer.innerHTML = "<p>Product not found.</p>";
+        }
+    }
+
+    window.openTab = function(evt, tabName) {
+        document.querySelectorAll('.tab-content').forEach(tc => tc.style.display = 'none');
+        document.querySelectorAll('.tab-btn').forEach(tb => tb.className = 'tab-btn');
+        document.getElementById(tabName).style.display = 'block';
+        evt.currentTarget.className += " active";
+    };
+
     // --- Search Logic ---
     const searchInput = document.getElementById('productSearch');
     if (searchInput) {
@@ -453,9 +774,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             productCards.forEach(card => {
                 const title = card.querySelector('h4').textContent.toLowerCase();
-                const desc = card.querySelector('.product-desc') ? card.querySelector('.product-desc').textContent.toLowerCase() : '';
                 
-                if (title.includes(filterValue) || desc.includes(filterValue)) {
+                if (title.includes(filterValue)) {
                     card.style.display = 'block';
                     setTimeout(() => card.style.opacity = '1', 50);
                 } else {
@@ -470,16 +790,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterBtns = document.querySelectorAll('.filter-btn');
     if (filterBtns.length > 0) {
         const productCards = document.querySelectorAll('.product-card');
-
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 filterBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-                
                 if(searchInput) searchInput.value = '';
-
                 const filterValue = btn.getAttribute('data-filter');
-                
                 productCards.forEach(card => {
                     if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
                         card.style.display = 'block';
@@ -557,13 +873,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const invoiceModal = document.getElementById('invoiceModal');
     const invBackdrop = document.getElementById('invBackdrop');
     
-    const updateCartUI = () => {
+    window.updateCartUI = () => {
         const count = cart.reduce((sum, item) => sum + item.qty, 0);
         cartCountEls.forEach(el => el.textContent = count);
         localStorage.setItem('lm_cart_data', JSON.stringify(cart));
     };
 
-    const renderCart = () => {
+    window.renderCart = () => {
         cartItemsContainer.innerHTML = '';
         let total = 0;
 
@@ -628,41 +944,42 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    const addToCartBtns = document.querySelectorAll('.add-to-cart');
-    addToCartBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const card = e.target.closest('.product-card');
-            const name = card.querySelector('h4').textContent;
-            
-            let priceEl = card.querySelector('.price');
-            let clone = priceEl.cloneNode(true);
-            let old = clone.querySelector('.old-price');
-            if(old) old.remove();
-            let priceText = clone.textContent.trim().replace('$', '');
-            let price = parseFloat(priceText);
+    // Generic Add to Cart Function
+    window.addToCart = (id, quantity) => {
+        const product = productsDB.find(p => p.id === parseInt(id));
+        if(!product) return;
 
-            const existingItem = cart.find(item => item.name === name);
+        const existingItem = cart.find(item => item.id === product.id);
 
-            if (existingItem) {
-                existingItem.qty++;
-            } else {
-                const newItem = {
-                    name: name,
-                    price: price,
-                    qty: 1
-                };
-                cart.push(newItem);
-            }
+        if (existingItem) {
+            existingItem.qty += quantity;
+        } else {
+            const newItem = {
+                id: product.id,
+                name: product.title,
+                price: product.price,
+                qty: quantity
+            };
+            cart.push(newItem);
+        }
 
-            updateCartUI();
-            
-            cartCountEls.forEach(el => {
-                el.classList.add('bump');
-                setTimeout(() => el.classList.remove('bump'), 200);
-            });
-            
-            showToast("Added to cart: " + name);
+        updateCartUI();
+        
+        cartCountEls.forEach(el => {
+            el.classList.add('bump');
+            setTimeout(() => el.classList.remove('bump'), 200);
         });
+        
+        showToast("Added to cart: " + product.title);
+    };
+
+    // Listeners for DB based buttons (Products Page)
+    document.body.addEventListener('click', (e) => {
+        if(e.target.closest('.add-to-cart-db')) {
+            const btn = e.target.closest('.add-to-cart-db');
+            const id = btn.getAttribute('data-id');
+            addToCart(id, 1);
+        }
     });
 
     const cartTriggers = document.querySelectorAll('.cart-trigger');
