@@ -307,9 +307,19 @@ function injectCartHTML() {
     <div class="invoice-actions">
       <button class="btn btn-outline" id="closeInv"
         style="color:var(--text);border-color:var(--border)">Close</button>
-      <button class="btn btn-primary" onclick="window.print()">
-        <i class="fa-solid fa-print"></i> Print
-      </button>
+      <div class="invoice-actions-right">
+        <button class="btn btn-outline" id="dlJpgBtn"
+          style="color:var(--text);border-color:var(--border)">
+          <i class="fa-solid fa-image"></i> JPG
+        </button>
+        <button class="btn btn-outline" id="dlPdfBtn"
+          style="color:var(--text);border-color:var(--border)">
+          <i class="fa-solid fa-file-pdf"></i> PDF
+        </button>
+        <button class="btn btn-primary" onclick="window.print()">
+          <i class="fa-solid fa-print"></i> Print
+        </button>
+      </div>
     </div>
   </div>`;
   document.body.insertAdjacentHTML('beforeend', html);
@@ -469,6 +479,7 @@ function animCounter(el, raw, dur = 1800) {
   const hasPlus  = raw.includes('+');
   const hasYears = raw.toLowerCase().includes('year');
   const num = parseInt(raw.replace(/\D/g,''), 10);
+  if (isNaN(num)) return;
   const suffix = hasPlus ? '+' : (hasYears ? ' Years' : '');
   let s = 0; const step = num / (dur / 16);
   const tick = () => {
@@ -614,11 +625,18 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, { threshold:.5 });
-  document.querySelectorAll('.service-card, .stats-card').forEach(c => cio.observe(c));
+  document.querySelectorAll('.stats-card').forEach(c => cio.observe(c));
 
   /* ── Inject Cart HTML ── */
   injectCartHTML();
   refreshBadge();
+
+  /* ── Export Invoice LoadScript ── */
+  const loadScript = (src, cb) => {
+    if (document.querySelector(`script[src="${src}"]`)) return cb();
+    const s = document.createElement('script');
+    s.src = src; s.onload = cb; document.head.appendChild(s);
+  };
 
   /* ── Cart Open/Close ── */
   document.querySelectorAll('.cart-trigger').forEach(t =>
@@ -644,6 +662,66 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target.closest('#closeInv')) {
       document.getElementById('invoiceModal')?.classList.remove('open');
       document.getElementById('invBackdrop')?.classList.remove('open');
+    }
+
+    /* Invoice Export PDF/JPG */
+    const pdfBtn = e.target.closest('#dlPdfBtn');
+    if (pdfBtn) {
+      const orig = pdfBtn.innerHTML;
+      pdfBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> PDF...';
+      loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js', () => {
+        const el = document.getElementById('invoiceModal');
+        const actions = el.querySelector('.invoice-actions');
+        const origMaxH = el.style.maxHeight;
+        const origOver = el.style.overflowY;
+        
+        actions.style.display = 'none';
+        el.style.maxHeight = 'none';
+        el.style.overflowY = 'visible';
+        
+        const opt = {
+          margin: 0.5,
+          filename: 'LittleMaker_Invoice.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2, useCORS: true },
+          jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };
+        
+        html2pdf().set(opt).from(el).save().then(() => {
+          actions.style.display = '';
+          el.style.maxHeight = origMaxH;
+          el.style.overflowY = origOver;
+          pdfBtn.innerHTML = orig;
+        });
+      });
+    }
+
+    const jpgBtn = e.target.closest('#dlJpgBtn');
+    if (jpgBtn) {
+      const orig = jpgBtn.innerHTML;
+      jpgBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> JPG...';
+      loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js', () => {
+        const el = document.getElementById('invoiceModal');
+        const actions = el.querySelector('.invoice-actions');
+        const origMaxH = el.style.maxHeight;
+        const origOver = el.style.overflowY;
+        
+        actions.style.display = 'none';
+        el.style.maxHeight = 'none';
+        el.style.overflowY = 'visible';
+        
+        window.html2canvas(el, { scale: 2, useCORS: true }).then(canvas => {
+          actions.style.display = '';
+          el.style.maxHeight = origMaxH;
+          el.style.overflowY = origOver;
+          jpgBtn.innerHTML = orig;
+          
+          const link = document.createElement('a');
+          link.download = 'LittleMaker_Invoice.jpg';
+          link.href = canvas.toDataURL('image/jpeg', 0.9);
+          link.click();
+        });
+      });
     }
   });
 

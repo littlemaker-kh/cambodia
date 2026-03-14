@@ -836,7 +836,7 @@ footer::before {
   position:fixed; inset:0;
   background:rgba(0,0,0,.55);
   backdrop-filter:blur(7px); -webkit-backdrop-filter:blur(7px);
-  z-index:2000; display:none; justify-content:flex-end;
+  z-index:100001; display:none; justify-content:flex-end;
 }
 .cart-modal-overlay.open { display:flex }
 
@@ -913,13 +913,13 @@ footer::before {
 .qty-val { font-weight:800; min-width:22px; text-align:center; font-family:'Barlow Condensed',sans-serif }
 
 /* ── Invoice ── */
-.invoice-backdrop { position:fixed; inset:0; background:rgba(0,0,0,.66); backdrop-filter:blur(5px); z-index:2999; display:none }
+.invoice-backdrop { position:fixed; inset:0; background:rgba(0,0,0,.66); backdrop-filter:blur(5px); z-index:100001; display:none }
 .invoice-backdrop.open { display:block }
 .invoice-modal {
   position:fixed; top:50%; left:50%; transform:translate(-50%,-50%);
   background:var(--card); width:90%; max-width:680px;
   padding:40px; border-radius:var(--r); box-shadow:var(--sh3);
-  z-index:3000; display:none; max-height:90vh; overflow-y:auto;
+  z-index:100002; display:none; max-height:90vh; overflow-y:auto;
 }
 .invoice-modal.open { display:block; animation:popIn .35s var(--ease) }
 @keyframes popIn { from{opacity:0;transform:translate(-50%,-50%) scale(.9)} to{opacity:1;transform:translate(-50%,-50%) scale(1)} }
@@ -931,7 +931,8 @@ footer::before {
 .invoice-body th { font-weight:700; color:#555; font-size:.82rem; text-transform:uppercase; font-family:'Barlow Condensed',sans-serif; letter-spacing:.5px }
 .text-right { text-align:right!important }
 .invoice-summary { text-align:right; margin-top:20px; font-family:'Barlow Condensed',sans-serif; font-size:1.3rem; font-weight:900 }
-.invoice-actions { margin-top:30px; display:flex; gap:10px; justify-content:flex-end }
+.invoice-actions { margin-top:30px; display:flex; gap:10px; justify-content:space-between; flex-wrap:wrap; }
+.invoice-actions-right { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
 
 /* ── Language Dropdown ── */
 .lang-dropdown { position:relative }
@@ -1108,4 +1109,17 @@ body.dark-mode .product-card  { border-color:#2a3345 }
   body.dark-mode .mobile-bottom-bar { background:#1c2230; border-top-color:#2a3345 }
   body.dark-mode .mobile-bottom-bar .nav-link { color:#5a6a7e }
   body.dark-mode .mobile-bottom-bar .nav-link.active { color:#4da6ff }
+}
+
+/* ── Print Styles ── */
+@media print {
+  body * { visibility: hidden; }
+  .invoice-modal, .invoice-modal * { visibility: visible; }
+  .invoice-modal {
+    position: absolute; left: 0; top: 0; transform: none;
+    width: 100%; max-width: 100%; box-shadow: none; padding: 20px;
+    background: #fff !important; color: #000 !important; border: none;
+    max-height: none !important; overflow: visible !important;
+  }
+  .invoice-actions { display: none !important; }
 }
